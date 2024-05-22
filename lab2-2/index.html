@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="input-section">
+                <input type="text" placeholder="Назва товару">
+                <button>Додати</button>
+            </div>
+            <div class="list-section">
+                <div class="item">
+                    <span class="item-name crossed-out">Помідори</span>
+                    <span class="item-quantity">2</span>
+                    <button class="status-button_not-bought">Куплено</button>
+                </div>
+                <div class="item">
+                    <span class="item-name">Печиво</span>
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <span class="item-quantity">2</span>
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="status-button_not-bought">Не куплено</button>
+                </div>
+                <div class="item">
+                    <input type="text" value="Сир" class="item-name-1">
+                    <div class="quantity-controls">
+                        <button class="decrease">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="status-button_not-bought">Не куплено</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="summary-section remaining">
+                <h3>Залишилося</h3>
+                <div class="summary-item">Печиво <span class="badge">2</span></div>
+                <div class="summary-item">Сир <span class="badge">1</span></div>
+            </div>
+            <div class="summary-section bought">
+                <h3>Куплено</h3>
+                <div class="summary-item crossed-out">Помідори <span class="badge">2</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
