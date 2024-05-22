@@ -11,31 +11,30 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
     background: #D9D9D9;
-    width: 90%;
+    position: relative;
 }
 
 .left-section {
     position: relative;
-    width: 60%;
+    width: 700px;
 }
+
 .right-section {
-    width: 30%;
+    width: 400px;
 }
 
 .left-section,
 .right-section {
     background-color: white;
     border-radius: 8px;
-    padding: 20px;
     box-shadow: 4px 4px 9.5px rgba(0, 0, 0, 0.25);
-   
 }
 
 .input-section {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .input-section input {
@@ -55,10 +54,14 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: inset 0px -5px 4px rgba(0, 0, 0, 0.25);
+    width: 20%;
+        font-style: normal;
+        font-weight: 600;        
+        /* identical to box height */
+    
+        color: #FFFFFF;
 
-    /* Rectangle 4 */
-        box-shadow: inset 0px -5px 4px rgba(0, 0, 0, 0.25);
-     
 }
 
 .input-section button:hover {
@@ -71,44 +74,54 @@ body {
     gap: 10px;
 }
 
+.item-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+           
+        border: 2px #DCDCDC;
+        border-style: solid none solid none;
+}
+
 .item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-radius: 4px;
+    border: 2px #DCDCDC;
+    border-style: none none solid none;
+    
+
 }
 
 .item-name {
     flex-grow: 1;
-    margin-right: 10px;
+    margin-left: 20px;
     
 }
-.item-name-1{
+
+.item-name-1 {
     width: 80px;
+    margin-left: 20px;
 }
 
-.item-quantity{
-    background-color: #D9D9D9 ;
-        border-radius: 3px;
-        text-align: center;
-        padding: 3px 14px;
-        
-
+.item-quantity {
+    background-color: #D9D9D9;
+    border-radius: 3px;
+    text-align: center;
+    padding: 3px 14px;
+    margin-right: 30%;
+    margin-left: 32%;
 }
 
-
-.crossed-out {
-    text-decoration: line-through;
-}
 
 .quantity-controls {
     position: absolute;
-    left: 50%;
     display: flex;
     align-items: center;
-    margin-right: 10px;
-    
+    margin-right: 30%;
+    margin-left: 38.5%;
 }
 
 .quantity-controls button {
@@ -131,12 +144,20 @@ body {
     font-size: 16px;
 }
 
-.status-button_not-bought{
-    background-color: #ffc107;
+.status-button_not-bought {
+   
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 85%;
+/* Rectangle 8 */
+    width: 20%;
+    height: 40px;
+    border: 2px solid #DCDCDC;
+    background: #F6F6F6;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 .status-button.bought {
@@ -147,17 +168,18 @@ body {
 .right-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .summary-section {
-    padding: 10px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .summary-section h3 {
-    margin: 0 0 10px 0;
+    margin: 20px 0 20px 20px;
+    font-weight: 800;
+    font-size: 20px;
+
 }
 
 .summary-item {
@@ -173,4 +195,131 @@ body {
     padding: 2px 6px;
     margin-left: 5px;
     font-size: 12px;
+}
+
+.badged {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    background-color: #6f42c1;
+    /* Dark purple color */
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 700;
+    /* Ensure the font size is appropriate */
+}
+
+.badged:hover {
+    bottom: 20px;
+    /* Moves the badge up smoothly on hover */
+    background-color: #343a40;
+    /* Changes color on hover */
+}
+
+.badged:hover::after {
+    content: "Created by:\ATania Khaimyk";
+    /* Displays additional text on hover */
+    display: block;
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+    white-space: pre;
+}
+
+.product-item {
+    display: inline-block;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;    
+    background: #E8E8E8;
+    margin-left: 20px;
+    margin-right: -20px;
+}
+
+.amount {
+    border-radius: 10px;
+
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;    
+    background: #F2711D;
+    color: white;
+    padding: 3px 2px 0px 2px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+}
+
+.product-item-cross{
+        display: inline-block;
+            height: 25px;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+            background: #E8E8E8;
+            text-decoration: line-through;
+            margin-left: 20px;
+}
+
+.remaining-two {
+    border: 2px #DCDCDC;
+    border-style: solid none solid none;
+    padding: 20px 0;       
+}
+
+.remaining-two-cross{
+    border: 2px #DCDCDC;
+     border-style: solid none none none;
+        padding: 20px 0;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+}
+
+.delete{
+        width: 7%;
+        height: 43px;
+        margin-left: 7px;
+        background: #DB2828;
+        box-shadow: inset 0px -6px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        border: 0px;
+        margin-top: 1px;
+        color: white;
+        font-weight: 800;
+        font-size: 15px;
+        cursor: pointer;
+}
+
+.delete-2 {
+        width: 7%;
+            height: 43px;
+            margin-left: 7px;
+            background: #DB2828;
+            box-shadow: inset 0px -6px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            border: 0px;
+            margin-top: 1px;
+            color: white;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: -395px;
 }
