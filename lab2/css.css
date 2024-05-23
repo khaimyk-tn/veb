@@ -1,182 +1,384 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-        background: #D9D9D9;
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-
-.right_box {
-    
-/* Rectangle 5 */
-
-    position: absolute;
-    left: 70.06%;
-    right: 2.64%;
-    top: 6.61%;
-    bottom: 10.02%;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 7.7px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    margin-left: -100px;
-    height: 366px;
-}
-
-.left_box {    
-     
-        width: 60%;
-    /* Rectangle 2 */
-    
-        position: absolute;
-        width: 60%;
-        height: 352px;
-        top: 6.61%;
-        left: 1.64%;
-        bottom: 10.02%;
-        background: #FFFFFF;
-        box-shadow: 4px 4px 9.5px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-      
-}
-
-.position {
-    display: flex;
-    flex-direction: column;
-    margin-top: 82px;
-}
-
-.add-item {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.name_products {
-/* Rectangle 3 */
-
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 824px;
-    height: 61px;
-    margin: 30px 0 30px 30px;
-    background: #FFFFFF;
-    border: 3px solid #E6E3E3;
-    border-radius: 8px;
-}
-
-.add-button {
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-
-
-.product-item label,
-.product-item input {
-    flex: 1;
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-.quantity {
-    flex: 0 0 30px;
-    text-align: center;
-}
-
-button {
-    padding: 5px 10px;
-    font-size: 14px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgb(81, 119, 197);
-    color: white;
-}
-
-.not-bought,
-.remove {
-    background-color: #ccc;
-}
-
-.bought {
-    background-color: #ddd;
-}
-
-.decrement {
-    background-color: #f44336;
-    color: white;
-    border-radius: 50%;
-}
-
-.increment {
-    background-color: #4caf50;
-    color: white;
-    border-radius: 50%;
-}
-
-.strikethrough-1 {
-    position: relative;
-        top: 50%;
-    
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 28px;
-        line-height: 34px;
-        letter-spacing: 0.01em;
-        text-decoration-line: line-through;
-    
-        color: #000000;
-}
-
-
-
-.right_box .remaining,
-.right_box .bought-items {
-    margin-bottom: 20px;
-}
-
-.product-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.product-list .product-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .product-item {
-    background-color: hsl(0, 0%, 50%);
+    background-color: #e8e8e8;
     display: inline-block;
-    height: 65px;
-    padding: 5px;
-    background: #FFFFFF;
-    border: 2px solid #E6E3E3;
+    height: 22px;
+
+    padding: 11px 10px 8px 10px;
+    border-top: 10px;
+    border-radius: 5px;
 }
 
-.amount {
-    background-color: #ff5722;
-    border-radius: 10px;
+.text {
+    font-size: 14px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+body {
+    margin-top: 100px;
+}
+
+h2 {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+}
+
+.product-text {
+    font-size: 14px;
+}
+
+.shell {
+    background-color: #f2711d;
     color: white;
-    border-radius: 50%;
+
+    border-radius: 10px;
     display: inline-block;
     height: 20px;
     width: 20px;
-    padding: 2px 6px;
-    margin-left: 10px;
     text-align: center;
+}
+
+.amount {
+    font-size: 12px;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+ 
+}
+
+.product-center,
+.product-last,
+.product-first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-first,
+.basket-second,
+.basket-third,
+.basket-fourth,
+.product-first,
+.product-center,
+.product-last,
+.input {
+    padding: 1em;
+    border: thin solid #f0f0f1;
+}
+
+.basket-first,
+.input {
+    border-radius: 5px 5px 0 0;
+}
+
+.basket-fourth,
+.product-last {
+    border-radius: 0 0 5px 5px;
+}
+
+.basket,
+.product {
+    background-color: #ffffff;
+    height: 100%;
+    background: #FFFFFF;
+        box-shadow: 4px 4px 7.7px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+}
+
+.basket {
+    width: 33%;
+}
+
+.product {
+    width: 65%;
+}
+
+body {
+    min-width: 500px;
+    background-color: #dadada;
+}
+
+.add-button {
+    display: inline-block;
+    padding: 10px;
+    width: 15%;
+    font-size: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 0 5px 5px 0;
+    background: #2285D0;
+    box-shadow: inset 0px -5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.add-input {
+    padding-right: 5px;
+}
+
+.add-button:hover {
+    background: linear-gradient(#186db5, #2285d0);
+}
+
+.input {
+    padding: 1em;
+    display: flex;
+}
+
+#input {
+    width: 85%;
+    box-sizing: border-box;
+    display: inline-block;
+    outline: none;
+    border: thin solid #e4e4e5;
+    border-radius: 5px 0 0 5px;
+    padding-left: 15px;
+}
+
+.product-count {
+    background-color: #e8e8e8;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 14px;
+    margin: 0 5px 0 5px;
+}
+
+.subtract,
+.delete {
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;    
+    background: #DB2828;
+    box-shadow: inset 0px -6px 1px rgba(0, 0, 0, 0.25);    
+}
+
+.subtract:hover,
+.delete:hover {
+    background: linear-gradient(#bb0808, #db2828);
+}
+
+.add {
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    
+        background: #22BA46;
+        box-shadow: inset 0px -6px 1px rgba(0, 0, 0, 0.25);
+}
+
+.add:hover {
+    background: linear-gradient(#1a9737, #22ba46);
+}
+
+.delete {
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.bought,
+.not-bought {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background: #F6F6F6;
+    border: 2px solid #DCDCDC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-text {
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.bought {
+    margin-right: 5px;
+}
+
+.bought:hover,
+.not-bought:hover {
+    cursor: pointer;
+    background: linear-gradient(#eeeeee, #f7f7f7);
+}
+
+.left {
+    width: 33%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.right {
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.center {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer.badge {
+    background-color: #af01da;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+    height: 8%;
+    width: 10%;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+footer.badge:hover {
+    height: 160px;
+    width: 13%;
+    background-color: #4d01da;
+}
+
+footer article {
+    margin-left: 15px;
+}
+
+h2.badge {
+    padding-top: 10px;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.author {
+    font-size: 15px;
+}
+
+footer article p {
+    font-size: 13px;
+}
+
+div.left s,
+span {
+    font-size: 20px;
+}
+
+@media (max-width: 500px) {
+    footer.badge {
+        width: 50px;
+    }
+
+    .parent {
+        display: block;
+    }
+
+    .product,
+    .basket {
+        width: 100%;
+    }
+
+    .basket {
+        margin-top: 7px;
+    }
+
+    h2.badge {
+        font-size: 15px;
+    }
+
+    footer article p {
+        font-size: 7px;
+    }
+
+    .author {
+        font-size: 9px;
+    }
+
+    .add-button {
+        font-size: 13px;
+    }
+
+    footer article {
+        margin-left: 10px;
+    }
+}
+
+@media print {
+    h2.badge {
+        display: none;
+    }
+
+    footer div p {
+        font-size: 9px;
+    }
+
+    footer {
+        background-color: white;
+        color: black;
+        border: thin solid purple;
+    }
+
+    .author {
+        font-size: 10px;
+    }
+}
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #af01da;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    bottom: 100%;
+    margin-bottom: 7px;
+    /* Початково приховуємо підказку нижче */
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    /* Початкова позиція підказки (нижче елемента) */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Додаємо анімацію для opacity та transform */
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    /* Підказка плавно піднімається на своє місце */
+}
+
+.subtract.unv {
+   background-color: #EF9E9E ;
+    box-shadow: none;
+}
+
+.subtract.unv:hover {
+    background: #EF9E9E;
+    box-shadow: none;
 }
